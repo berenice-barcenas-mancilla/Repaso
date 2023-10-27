@@ -22,7 +22,6 @@
             </script>
         @endif
     
-
         <form method="POST" action="/save">
             @csrf
             <div class="col-md-6">

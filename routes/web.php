@@ -22,4 +22,4 @@ Route::get('/', [LibraryController::class, 'index'])->name('home');
 Route::get('/register', [RegisterController::class, 'index'])->name('libros');
 
 // Ruta para guardar registro
-Route::post('/save', [RegisterController::class, 'save'])->name('guardar');
+Route::post('/save', [RegisterController::class, 'save'])->name('save');
