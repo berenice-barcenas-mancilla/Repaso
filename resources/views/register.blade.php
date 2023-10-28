@@ -6,12 +6,12 @@
             <script>
                 Swal.fire({
                     icon: 'success',
-                    title: 'Success',
-                    text: '{{ session('success') }}',
+                    title: 'correcto',
+                    text: 'Libro {{ session('success') }}',
                 });
             </script>
         @endif
-    
+        
         @if (session('error'))
             <script>
                 Swal.fire({
@@ -21,6 +21,7 @@
                 });
             </script>
         @endif
+    
     
         <form method="POST" action="/save">
             @csrf
@@ -54,7 +55,7 @@
             </div>
             <div class="col-md-10">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email" placeholder="Ingresa el email de la editorial" >
+                <input type="text" class="form-control" id="email" value="{{ old('email') }}" name="email" placeholder="Ingresa el email de la editorial" >
                 <p class="text-danger">{{ $errors->first('email') }}</p>
             </div>
            

@@ -13,7 +13,11 @@ class RegisterController extends Controller
 
     public function save(RegisterRequest $request)
     {
-        return redirect('/register')->with('success', 'Guardado');
+        try {
+            return redirect('/register')->with('success '.$request->titulo.' Guardado');
+        } catch (\Exception $e) {
+            return redirect('/register')->with('error', 'Error al guardar el libro: ' . $e->getMessage());
+        }
     }
 
 }
