@@ -6,12 +6,12 @@
             <script>
                 Swal.fire({
                     icon: 'success',
-                    title: 'correcto',
-                    text: 'Libro {{ session('success') }}',
+                    title: 'Success',
+                    text: '{{ session('success') }}',
                 });
             </script>
         @endif
-        
+    
         @if (session('error'))
             <script>
                 Swal.fire({
@@ -22,6 +22,7 @@
             </script>
         @endif
     
+
     
         <form method="POST" action="/save">
             @csrf
